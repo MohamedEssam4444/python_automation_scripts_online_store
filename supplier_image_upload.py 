@@ -1,0 +1,13 @@
+#!/usr/bin/env python3
+import requests
+import os
+imgpath='supplier-data/images/'
+images_in_current_directory=os.listdir(imgpath)
+for infile in images_in_current_directory:
+    i=os.path.basename(infile)
+    print(i)
+    f, e = os.path.splitext(infile)
+    if e =='.jpeg':
+        url = "http://localhost/upload/"
+        with open(imgpath+i, 'rb') as opened:
+            r = requests.post(url, files={'file': opened})
