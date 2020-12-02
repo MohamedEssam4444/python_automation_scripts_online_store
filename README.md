@@ -27,15 +27,15 @@ You work for an online fruit store, and you need to develop a system that will u
     * To: username@example.com
     * Subject line:
 * Case
-Subject line
-*CPU usage is over 80%
-Error - CPU usage is over 80%
-*Available disk space is lower than 20%
-Error - Available disk space is less than 20%
-*available memory is less than 500MB
-Error - Available memory is less than 500MB
-*hostname "localhost" cannot be resolved to "127.0.0.1"
-Error - localhost cannot be resolved to 127.0.0.1
+* Subject line
+* CPU usage is over 80%
+* Error - CPU usage is over 80%
+* Available disk space is lower than 20%
+* Error - Available disk space is less than 20%
+* available memory is less than 500MB
+* Error - Available memory is less than 500MB
+* hostname "localhost" cannot be resolved to "127.0.0.1"
+* Error - localhost cannot be resolved to 127.0.0.1
     * E-mail Body: Please check your system and resolve the issue as soon as possible.
 
 ### Files: 
@@ -43,7 +43,7 @@ Error - localhost cannot be resolved to 127.0.0.1
 2. **supplier_image_upload.py**: that takes the jpeg images from the supplier-data/images directory that you've processed previously and uploads them to the web server fruit catalog.
 3. **run.py**: to process the text files (001.txt, 003.txt ...) from the supplier-data/descriptions directory. The script should turn the data into a JSON dictionary by adding all the required fields, including the image associated with the fruit (image_name) , To add fruit images and their descriptions from the supplier on the fruit catalog web-server, will automatically POST the fruit images and their respective description in JSON format
 
-#### proven steps: 
+#### screenshots for more explanation: 
 
 1. uploading modified images to webserver :
 
