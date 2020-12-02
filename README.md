@@ -1,4 +1,4 @@
-# python_bash_automation_scripts_online_store 
+# Python_automation_scripts_online_store 
 You work for an online fruit store, and you need to develop a system that will update the catalog information with data provided by your suppliers. When each supplier has new products for your store, they give you an image and a description of each product. Given a bunch of images and descriptions of each of the new products: 
 * Upload the new products to your online store. 
 * Images and descriptions should be uploaded separately, using two different web endpoints. Since this process is key to your business's success, you need to make sure that it keeps running! So:
