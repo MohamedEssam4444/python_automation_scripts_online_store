@@ -16,7 +16,12 @@ You work for an online fruit store, and you need to develop a system that will u
 * {"name": "Watermelon", "weight": 500, "description": "Watermelon is good for relieving heat, eliminating annoyance and quenching thirst. It contains a lot of water, which is good for relieving the symptoms of acute fever immediately. The sugar and salt contained in watermelon can diuretic and eliminate kidney inflammation. Watermelon also contains substances that can lower blood pressure.", "image_name": "010.jpeg"}
 * Iterate over all the fruits and use post method from Python requests library to upload all the data
 * Finally, in parallel to the automation running, we want to check the health of the system and send an email if something goes wrong.
-* health_check.py that will run in the background monitoring some of your system statistics: CPU usage, disk space, available memory and name resolution. Moreover, this Python script should send an email if there are problems, such as:
+
+### Files: 
+1. **changeImage.py**: to process the supplier images
+2. **supplier_image_upload.py**: that takes the jpeg images from the supplier-data/images directory that you've processed previously and uploads them to the web server fruit catalog.
+3. **run.py**: to process the text files (001.txt, 003.txt ...) from the supplier-data/descriptions directory. The script should turn the data into a JSON dictionary by adding all the required fields, including the image associated with the fruit (image_name) , To add fruit images and their descriptions from the supplier on the fruit catalog web-server, will automatically POST the fruit images and their respective description in JSON format
+4. **health_check.py**: that will run in the background monitoring some of your system statistics: CPU usage, disk space, available memory and name resolution. Moreover, this Python script should send an email if there are problems, such as:
     * Report an error if CPU usage is over 80%
     * Report an error if available disk space is lower than 20%
     * Report an error if available memory is less than 500MB
@@ -37,12 +42,6 @@ You work for an online fruit store, and you need to develop a system that will u
 * hostname "localhost" cannot be resolved to "127.0.0.1"
 * Error - localhost cannot be resolved to 127.0.0.1
     * E-mail Body: Please check your system and resolve the issue as soon as possible.
-
-### Files: 
-1. **changeImage.py**: to process the supplier images
-2. **supplier_image_upload.py**: that takes the jpeg images from the supplier-data/images directory that you've processed previously and uploads them to the web server fruit catalog.
-3. **run.py**: to process the text files (001.txt, 003.txt ...) from the supplier-data/descriptions directory. The script should turn the data into a JSON dictionary by adding all the required fields, including the image associated with the fruit (image_name) , To add fruit images and their descriptions from the supplier on the fruit catalog web-server, will automatically POST the fruit images and their respective description in JSON format
-
 #### screenshots for more explanation: 
 
 1. uploading modified images to webserver :
