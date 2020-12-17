@@ -20,11 +20,11 @@ def check_host_resolving():
     return localhost_ip == "127.0.0.1"
 
 if not check_cpu_usage():
-    print('ERROR!!!!!!!!!')
+    print('ERROR CPU usage!')
     message=report_email.generate_withno_attachement('automation@example.com',"{}@example.com".format(os.environ.get('USER')),'Error - CPU usage is over 80%','Please check your system and resolve the issue as soon as possible.')
     report_email.send(message)
 elif not check_disk_space("/"):
-    print('ERROR!!!!!!!!!')
+    print('ERROR Disk space!')
     message=report_email.generate_withno_attachement('automation@example.com',"{}@example.com".format(os.environ.get('USER')),'Error - Available disk space is less than 20%','Please check your system and resolve the issue as soon as possible.')
     report_email.send(message)
 
@@ -34,7 +34,7 @@ elif not check_cpu_memory():
     report_email.send(message)
 
 elif not check_host_resolving():
-    print('ERROR!!!!!!!!!')
+    print('ERROR host not resolving!')
     message=report_email.generate_withno_attachement('automation@example.com',"{}@example.com".format(os.environ.get('USER')),'Error - localhost cannot be resolved to 127.0.0.1','Please check your system and resolve the issue as soon as possible.')
     report_email.send(message)
 else: print("everything is OK")
